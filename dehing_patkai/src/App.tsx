@@ -13,7 +13,7 @@ import Baby from './pages/Baby';
 import BuyAgain from './pages/BuyAgain';
 
 function App() {  
-  const [products, setProduct] = useState('A dummy product'); 
+  const [products, setProduct] = useState({name:'MoboDev1', price: 200001, description:'along desc 1'}); 
 
   return (
       <div className="App">      

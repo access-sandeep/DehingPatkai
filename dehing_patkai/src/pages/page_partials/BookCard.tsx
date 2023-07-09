@@ -6,7 +6,9 @@ function BookCard() {
   return (
     <>
     <div>
-      <h2>{products}</h2>
+      <h2>{products.name}</h2>
+      <p>{products.price}</p>
+      <p>{products.description}</p>
     </div>
     </>
   );

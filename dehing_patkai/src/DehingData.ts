@@ -1,2 +1,7 @@
 import { createContext } from 'react';
-export const DehingData = createContext<{ products: string; setProduct: React.Dispatch<React.SetStateAction<string>>; }>({products:'', setProduct:{} as any});
+interface Product {
+    name: string;
+    price: number;
+    description: string
+}
+export const DehingData = createContext<{ products: Product; setProduct: React.Dispatch<React.SetStateAction<Product>>; }>({products:{name:'MoboDev', price: 200000, description:'along desc'}, setProduct:{} as any});
