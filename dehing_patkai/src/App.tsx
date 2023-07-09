@@ -1,34 +1,39 @@
-import React from 'react';
-import logo from './images/logo.jpeg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { DehingData } from './DehingData';
+import { useState } from 'react';
+import Layout from './global_partials/Layout';
+import Home from './pages/Home';
+import All from './pages/All';
+import Fresh from './pages/Fresh';
+import Books from './pages/Books';
+import Electronics from './pages/Electronics';
+import GiftIdeas from './pages/GiftIdeas';
+import Baby from './pages/Baby';
+import BuyAgain from './pages/BuyAgain';
 
-function App() {
+function App() {  
+  const [products, setProduct] = useState('A dummy product'); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <div><img src={logo} className="App-logo" alt="logo" /></div>
-        <div>
-          <div id="glow-ingress-block">
-              <span className="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
-                  Deliver to Sandeep
-              </span>
-              <span className="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
-                  Chennai 600130&zwnj;
-              </span>
-          </div>
-        </div>
-        Header placeholder
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-      <main>
-        Main area
-      </main>
-      <footer>
-        Footer Content
-      </footer>
-    </div>
+      <div className="App">      
+        <DehingData.Provider value={{products, setProduct}}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="all" element={<All />} />
+                <Route path="fresh" element={<Fresh />} />
+                <Route path="books" element={<Books />} />
+                <Route path="electronics" element={<Electronics />} />
+                <Route path="gift_ideas" element={<GiftIdeas />} />
+                <Route path="baby" element={<Baby />} />
+                <Route path="buy_again" element={<BuyAgain />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </DehingData.Provider> 
+      </div>   
   );
 }
 

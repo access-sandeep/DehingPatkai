@@ -16,15 +16,103 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 60px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
+  justify-content: center;
   color: white;
+}
+
+.App-header div {
+  margin: 0 auto;
+}
+
+.App-header select {
+  height: 2.3rem;
+}
+
+.App-header button {
+  height: 2.3rem;
+}
+
+.App-header input {
+  width: 60em;
+  height: 2rem;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+div#glow-ingress-block {
+  display: flex;
+}
+
+div#glow-ingress-block span {
+  font-size:0.9rem;
+  display: flex;
+}
+
+div.second-outer {
+  flex-flow: column;
+}
+
+.third-outer {
+  flex-flow: row;
+}
+
+.small-decorative-image {
+  height:1.5em
+}
+
+.cart-decorative-image {
+  height: 3em;
+  padding: 0;
+}
+
+.small-font {
+  font-size: 0.9rem;
+}
+
+.felx-row {
+  flex-direction: row;
+}
+
+div.navigation_holder {
+  margin-top:-16px;
+}
+
+nav {
+  display: flex !important;
+}
+
+nav.navigation {
+  flex-flow: column;
+}
+
+nav.navigation ul {
+  list-style: none;
+  display: flex;
+  background-color:#585a5c;
+  padding: 10px;
+}
+
+nav.navigation ul li {
+  list-style: none;
+  margin-right: 0.5rem;
+}
+
+nav.navigation ul li a{
+  padding:10px;
+  color:#ffffff;
+  /* vertical-align: middle; */
+  text-align: center;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #282c34;
+}
+.pending {
+  background-color: grey;
 }
