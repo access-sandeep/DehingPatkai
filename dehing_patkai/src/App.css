@@ -116,3 +116,16 @@ nav.navigation ul li a{
 .pending {
   background-color: grey;
 }
+
+.bookCard {
+  display: flex;    
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.bookCard > div {
+  margin:5px;
+  padding: 5px;
+  border:1px solid grey;
+  width: 160px;
+}
