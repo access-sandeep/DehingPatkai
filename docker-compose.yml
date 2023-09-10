@@ -1,12 +1,22 @@
 version:  '3'
 services:
   backend-app:
-    build: ./datacenter/.
+    build: 
+      context: ./datacenter/.
+      dockerfile: Dockerfile.dev
     ports:
       - "5000:8080"
+    volumes:
+      - /var/app/node_modules
+      - ./datacenter:/var/app/
     restart: "no"
   frontend-app:
-    build: ./dehing_patkai/.
+    build: 
+      context: ./dehing_patkai/.
+      dockerfile: Dockerfile.dev
     ports:
       - "5001:3000"
+    volumes:
+      - /var/app/node_modules
+      - ./dehing_patkai:/var/app/
     restart: "no"
