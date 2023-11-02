@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      DehingPatkai &copy;2023
+      <div>DehingPatkai &copy;2023</div>      
     </footer>
   );
 }

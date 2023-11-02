@@ -16,7 +16,7 @@ function Layout() {
         <Navigation />
       </div>      
     </header>
-    <main>
+    <main>      
       <Outlet />  
     </main>
     <Footer />

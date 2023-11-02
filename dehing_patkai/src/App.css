@@ -1,7 +1,178 @@
-.App {
-  text-align: center;
+div, nav {display: flex !important;}
+.container {
+  border: 1px solid #ff0000;
+}
+html,body {
+  margin: 0;
+  position: relative;
+  top:0;
+  left:0;
+  width:100vw;
 }
 
+#root {
+  margin: 0 5vw 0 5vw;
+  width: 90vw;
+  display:flex;
+}
+
+.App {
+  flex-flow: column wrap;
+  width:100vw;
+}
+.logo-space {
+  width: fit-content;
+}
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  color: white;
+}
+
+.search-btn {
+  background-image: url(../public/search.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0px;
+  border: 0px;
+  background-color: white;
+  width: 30px;
+  content: "";
+}
+
+nav > ul  {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;  
+  width:100%;
+}
+
+nav > ul > li {  
+  margin: 10px; 
+}
+
+nav > ul > li > a {  
+  border-radius: 5px;
+  background-color: black;
+  border:1px solid grey;
+  padding:5px;
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav > ul > li > a:hover {  
+  background-color: rgb(144, 30, 30);
+}
+
+nav > ul > li > a.active {  
+  background-color: rgb(144, 30, 30);
+}
+
+.App-logo {
+  height: 50px;
+  pointer-events: none;
+  margin:10px;
+}
+
+.small-decorative-image {
+  height: 16px;
+}
+
+.second-outer > .small-font {
+  font-size: 12px;
+}
+
+.second-outer > .larger-font {
+  font-size: 15px;
+}
+
+.deliver {
+  flex-flow: column;
+  margin-right: 0.5em;
+}
+
+input, button, select {
+  height:30px;
+}
+
+
+.col-2 {
+  width: calc(85vw*.17 - 60px);
+  height: 50px;
+  margin-right: 10px;
+}
+
+.col-3 {
+  width: calc(85vw*.38 - 60px);
+  height: 50px;
+  margin-right: 10px;
+}
+
+.col-4 {
+  width: calc(85vw - 85vw*.5 + 90px); /* instead of 100px, added only 90px to give 10px margin */
+  height: 50px;
+  margin-right: 10px;
+}
+
+.col-4 input{
+  height: 28px;
+  width: 100%;
+  border:0;
+}
+.col-4 button{
+  cursor: pointer;
+}
+
+.icp-nav-flag {
+  width: 24px;
+  position: relative;
+  display: inline-block;
+  height: 19px;
+  background-image: url(https://m.media-amazon.com/images/S/sash/fe2UeLQmJ11kKHN.png);
+  background-position: 1px -165px;
+}
+
+.nav-line-2 {
+  width: 47px;
+  display: flex !important;
+  margin: 10px;
+  height: 19px;
+}
+
+.nav-line-2 > div {
+  height: 19px;
+  margin-top: 0;
+  align-items: self-end;
+}
+
+.felx-row {
+  flex-flow: column;
+  margin: 0 10px;
+}
+
+.small-font {
+  font-size: 12px;
+}
+
+.felx-row select {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  margin: 0;
+}
+
+.felx-row .cartnum {
+  background-image: url(./images/cart.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+/* 
 .App-logo {
   height: 50px;
   pointer-events: none;
@@ -12,6 +183,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+header {
+  border: 1px solid;
 }
 
 .App-header {
@@ -78,9 +253,7 @@ div.second-outer {
   flex-direction: row;
 }
 
-div.navigation_holder {
-  margin-top:-16px;
-}
+
 
 nav {
   display: flex !important;
@@ -105,7 +278,6 @@ nav.navigation ul li {
 nav.navigation ul li a{
   padding:10px;
   color:#ffffff;
-  /* vertical-align: middle; */
   text-align: center;
   text-decoration: none;
 }
@@ -128,4 +300,12 @@ nav.navigation ul li a{
   padding: 5px;
   border:1px solid grey;
   width: 160px;
+} */
+
+main {
+  border: 1px solid rgb(178, 7, 7);
+}
+
+footer {
+  border: 1px solid rgb(18, 148, 29);
 }

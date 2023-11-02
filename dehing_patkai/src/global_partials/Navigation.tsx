@@ -1,41 +1,56 @@
 import { NavLink } from "react-router-dom";
 
-function Navigation() {
+function Navigation():any {
+    const navList = [
+        {
+            id:1,
+            name:"Home",
+            link:"/"
+        },
+        {
+            id:2,
+            name:"All",
+            link:"/all"
+        },
+        {
+            id:3,
+            name:"Fresh",
+            link:"/fresh"
+        },
+        {
+            id:4,
+            name:"Books",
+            link:"/books"
+        },
+        {
+            id:5,
+            name:"Electronics",
+            link:"/electronics"
+        },
+        {
+            id:6,
+            name:"Gift Ideas",
+            link:"/gift_ideas"
+        },
+        {
+            id:7,
+            name:"Baby",
+            link:"/baby"
+        },
+        {
+            id:8,
+            name:"Buy Again",
+            link:"/buy_again"
+        }
+    ];
   return (
     <nav className="navigation">
         <ul>
-            <li>
-                <NavLink to="/" className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Home</NavLink>
-            </li>
-            <li>
-                <NavLink to="/all" className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>All</NavLink>
-            </li>
-            <li>
-                <NavLink to="/fresh" className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Fresh</NavLink>
-            </li>
-            <li>
-                <NavLink to='/books' className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Books</NavLink>
-            </li>
-            <li>
-                <NavLink to='/electronics' className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Electronics</NavLink>
-            </li>
-            <li>
-                <NavLink to='/gift_ideas' className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Gift Ideas</NavLink>
-            </li>
-            <li>
-                <NavLink to='/baby' className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Baby</NavLink>
-            </li>
-            <li>
-                <NavLink to='/buy_again' className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""}>Buy again</NavLink>
-            </li>
+            {navList.map(nav=>{
+                return <li key={nav.id}>
+                            <NavLink to={nav.link}>{nav.name}</NavLink>
+                        </li>
+            })}
         </ul>
     </nav>
   );
