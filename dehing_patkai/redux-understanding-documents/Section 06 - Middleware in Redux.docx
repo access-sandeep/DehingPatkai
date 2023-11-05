@@ -1,0 +1,41 @@
+In this section, we see the important concept of Redux which is middleware
+
+Middleware is a function that runs after our action gets dispatched and before it reaches the reducer.
+
+Middleware is sometimes so useful if we want to do something after action gets dispatched like
+
+Logging the actions
+
+Showing the errors
+
+Calling an API
+
+If we are using the redux toolkit for our redux code then by default we get some middleware in our applications.
+
+For creating middleware, we write this code in a new file.
+
+const log = (store) => (next) => (action) => {
+    console.log(action);
+    next(action); // This will pass action to next middleware or reducer
+};
+ 
+export default log;
+After we create middleware, we have to add that middleware in the configureStore function.
+
+import { configureStore } from "@reduxjs/toolkit";
+import employeeReducer from "./employees";
+import taskReducer from "./tasks";
+import log from "../middleware/log";
+ 
+const store = configureStore({
+    reducer: {
+        tasks: taskReducer,
+        employees: employeeReducer,
+    },
+    middleware: (getDefaultMiddleware) => [
+        ...getDefaultMiddleware(),
+        log, // Order of this middleware matters
+    ],
+});
+ 
+export default store;

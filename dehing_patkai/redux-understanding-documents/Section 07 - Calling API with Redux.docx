@@ -1,0 +1,37 @@
+In this section, we see How we can call API using different methods:
+
+Normal function method
+
+createAsyncThunk method
+
+creating API middleware - my favourite
+
+In normal function method, we create normal functions and then we call API and then we dispatch our action to manage that data.
+
+createAsyncThunk method is a very useful method because it gives us 3 subactions like
+
+pending
+
+fulfil
+
+rejected
+
+We have to define all these subactions in extraReducer function. So we have to write a lot of code. That’s why a lot of developers use this API middleware method.
+
+In API middleware method, we create our own middleware special for API calls.
+
+For example, if we want to call an API that action object looks like this.
+
+Action Object API:
+{
+    type:"apiRequest",
+    payload: {
+        url: "https://localhost:5000/api/tasks",
+        method: "GET" /  "POST" / "PUT" / "PATCH" / "DELETE",
+        data: { task: "This is task" },
+        onSuccess: "getTasks",
+        onError: "SHOW_ERROR",
+    }
+}
+
+We will pass all necessary data with our payload and action type should always apiRequest (you can use whatever you want to).

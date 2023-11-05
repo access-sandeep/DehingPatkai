@@ -1,0 +1,21 @@
+In this section, we see how we can connect our Redux code with React application. There are two ways to connect our redux code with react application.
+
+Manual way to connect
+
+using React-redux library
+
+First, we add our redux store folder in our React application. Then we can connect our redux with react.
+
+If we use a manual way to connect, then we have to manually write subscribe and pass store in all our components using react context.
+
+But if we use the react-redux library, we don’t need to do any of these steps. This library does that for us.
+
+In this library, we have two hooks for functional components.
+
+useDispatch
+
+useSelector
+
+useDispatch is used to dispatch action from any component and useSelector is used to get value from a redux store.
+
+So react-redux library will make our code clean and maintainable.
